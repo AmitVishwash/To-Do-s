@@ -3,20 +3,42 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-09-30T18:54:19.703Z",
-        "line": 15,
+        "start_timestamp": "2021-10-10T15:39:45.427Z",
+        "before": [
+          {
+            "result": {
+              "duration": 114983400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bdd.stepDef.Hooks.runScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 16,
         "name": "Adding of To Do list of item",
         "description": "",
-        "id": "to-do-item--positive-flow;adding-of-to-do-list-of-item;;2",
+        "id": "to-do-item--functionality-testing;adding-of-to-do-list-of-item;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 709777700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bdd.stepDef.Hooks.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 3184092800,
+              "duration": 5330384700,
               "status": "passed"
             },
-            "line": 4,
+            "line": 5,
             "name": "user is on home page of the application",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.user_is_on_home_page_of_the_application()"
@@ -25,10 +47,10 @@
           },
           {
             "result": {
-              "duration": 92475600,
+              "duration": 163635700,
               "status": "passed"
             },
-            "line": 5,
+            "line": 6,
             "name": "user enters todo item \"Logo Designing\" in the search box",
             "match": {
               "arguments": [
@@ -43,10 +65,10 @@
           },
           {
             "result": {
-              "duration": 5078144900,
+              "duration": 60962300,
               "status": "passed"
             },
-            "line": 6,
+            "line": 7,
             "name": "when user clicks on enter",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.when_user_clicks_on_enter()"
@@ -55,10 +77,10 @@
           },
           {
             "result": {
-              "duration": 44997300,
+              "duration": 44997400,
               "status": "passed"
             },
-            "line": 7,
+            "line": 8,
             "name": "user should see the todo item added on the page",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.user_should_see_the_todo_item_added_on_the_page()"
@@ -67,10 +89,10 @@
           },
           {
             "result": {
-              "duration": 49952700,
+              "duration": 67028000,
               "status": "passed"
             },
-            "line": 8,
+            "line": 9,
             "name": "the user is on Active tab",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.theUserIsOnActiveTab()"
@@ -79,10 +101,10 @@
           },
           {
             "result": {
-              "duration": 45309200,
+              "duration": 59846200,
               "status": "passed"
             },
-            "line": 9,
+            "line": 10,
             "name": "the user should see \"1\" item left on Active tab",
             "match": {
               "arguments": [
@@ -97,10 +119,10 @@
           },
           {
             "result": {
-              "duration": 2088753100,
+              "duration": 120504600,
               "status": "passed"
             },
-            "line": 10,
+            "line": 11,
             "name": "user clicks on All tab",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.userClicksOnAllTab()"
@@ -109,10 +131,10 @@
           },
           {
             "result": {
-              "duration": 19994500,
+              "duration": 33995200,
               "status": "passed"
             },
-            "line": 11,
+            "line": 12,
             "name": "user should see the todo item added on the page",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.user_should_see_the_todo_item_added_on_the_page()"
@@ -121,10 +143,10 @@
           },
           {
             "result": {
-              "duration": 743916700,
+              "duration": 34500700,
               "status": "passed"
             },
-            "line": 12,
+            "line": 13,
             "name": "the user should see \"1\" item left on All tab",
             "match": {
               "arguments": [
@@ -145,17 +167,38 @@
         ]
       },
       {
-        "start_timestamp": "2021-09-30T18:54:31.173Z",
+        "start_timestamp": "2021-10-10T15:39:52.297Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "bdd.stepDef.Hooks.runScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
         "line": 32,
         "name": "Completing of To Do list of item",
         "description": "",
-        "id": "to-do-item--positive-flow;completing-of-to-do-list-of-item;;2",
+        "id": "to-do-item--functionality-testing;completing-of-to-do-list-of-item;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 687993700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bdd.stepDef.Hooks.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2649843500,
+              "duration": 14565463400,
               "status": "passed"
             },
             "line": 19,
@@ -167,7 +210,7 @@
           },
           {
             "result": {
-              "duration": 84989500,
+              "duration": 149529900,
               "status": "passed"
             },
             "line": 20,
@@ -185,7 +228,7 @@
           },
           {
             "result": {
-              "duration": 5062810400,
+              "duration": 45183300,
               "status": "passed"
             },
             "line": 21,
@@ -197,7 +240,7 @@
           },
           {
             "result": {
-              "duration": 26711300,
+              "duration": 44657600,
               "status": "passed"
             },
             "line": 22,
@@ -209,7 +252,7 @@
           },
           {
             "result": {
-              "duration": 39703300,
+              "duration": 40943500,
               "status": "passed"
             },
             "line": 23,
@@ -221,7 +264,7 @@
           },
           {
             "result": {
-              "duration": 19900400,
+              "duration": 35321300,
               "status": "passed"
             },
             "line": 24,
@@ -239,7 +282,7 @@
           },
           {
             "result": {
-              "duration": 2102127800,
+              "duration": 80145000,
               "status": "passed"
             },
             "line": 25,
@@ -251,7 +294,7 @@
           },
           {
             "result": {
-              "duration": 168790200,
+              "duration": 184050200,
               "status": "passed"
             },
             "line": 26,
@@ -263,7 +306,7 @@
           },
           {
             "result": {
-              "duration": 62059100,
+              "duration": 95332800,
               "status": "passed"
             },
             "line": 27,
@@ -275,7 +318,7 @@
           },
           {
             "result": {
-              "duration": 23998500,
+              "duration": 35995800,
               "status": "passed"
             },
             "line": 28,
@@ -287,7 +330,7 @@
           },
           {
             "result": {
-              "duration": 30988200,
+              "duration": 30999800,
               "status": "passed"
             },
             "line": 29,
@@ -311,17 +354,38 @@
         ]
       },
       {
-        "start_timestamp": "2021-09-30T18:54:41.467Z",
+        "start_timestamp": "2021-10-10T15:40:08.317Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "bdd.stepDef.Hooks.runScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
         "line": 48,
         "name": "Editing of To Do list of item",
         "description": "",
-        "id": "to-do-item--positive-flow;editing-of-to-do-list-of-item;;2",
+        "id": "to-do-item--functionality-testing;editing-of-to-do-list-of-item;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 707205400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bdd.stepDef.Hooks.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2329816800,
+              "duration": 2355130700,
               "status": "passed"
             },
             "line": 35,
@@ -333,7 +397,7 @@
           },
           {
             "result": {
-              "duration": 105066300,
+              "duration": 148933300,
               "status": "passed"
             },
             "line": 36,
@@ -351,7 +415,7 @@
           },
           {
             "result": {
-              "duration": 5062587900,
+              "duration": 54001900,
               "status": "passed"
             },
             "line": 37,
@@ -363,7 +427,7 @@
           },
           {
             "result": {
-              "duration": 30146100,
+              "duration": 51815100,
               "status": "passed"
             },
             "line": 38,
@@ -375,7 +439,7 @@
           },
           {
             "result": {
-              "duration": 39704100,
+              "duration": 59770200,
               "status": "passed"
             },
             "line": 39,
@@ -387,7 +451,7 @@
           },
           {
             "result": {
-              "duration": 30251000,
+              "duration": 40297500,
               "status": "passed"
             },
             "line": 40,
@@ -405,7 +469,7 @@
           },
           {
             "result": {
-              "duration": 2089453600,
+              "duration": 95596800,
               "status": "passed"
             },
             "line": 41,
@@ -417,7 +481,7 @@
           },
           {
             "result": {
-              "duration": 5191268600,
+              "duration": 185511300,
               "status": "passed"
             },
             "line": 42,
@@ -429,7 +493,7 @@
           },
           {
             "result": {
-              "duration": 69464500,
+              "duration": 110915400,
               "status": "passed"
             },
             "line": 43,
@@ -447,7 +511,7 @@
           },
           {
             "result": {
-              "duration": 5039505000,
+              "duration": 18997800,
               "status": "passed"
             },
             "line": 44,
@@ -459,7 +523,7 @@
           },
           {
             "result": {
-              "duration": 17003200,
+              "duration": 28999100,
               "status": "passed"
             },
             "line": 45,
@@ -483,20 +547,41 @@
         ]
       },
       {
-        "start_timestamp": "2021-09-30T18:55:01.488Z",
-        "line": 67,
+        "start_timestamp": "2021-10-10T15:40:12.183Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "bdd.stepDef.Hooks.runScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 66,
         "name": "Deleting of To Do list of item",
         "description": "",
-        "id": "to-do-item--positive-flow;deleting-of-to-do-list-of-item;;2",
+        "id": "to-do-item--functionality-testing;deleting-of-to-do-list-of-item;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 689527000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bdd.stepDef.Hooks.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2179762300,
+              "duration": 2408811500,
               "status": "passed"
             },
-            "line": 52,
+            "line": 51,
             "name": "user is on home page of the application",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.user_is_on_home_page_of_the_application()"
@@ -505,10 +590,10 @@
           },
           {
             "result": {
-              "duration": 92682500,
+              "duration": 129897600,
               "status": "passed"
             },
-            "line": 53,
+            "line": 52,
             "name": "user enters todo item \"Logo Designing\" in the search box",
             "match": {
               "arguments": [
@@ -523,10 +608,10 @@
           },
           {
             "result": {
-              "duration": 5067512500,
+              "duration": 39746400,
               "status": "passed"
             },
-            "line": 54,
+            "line": 53,
             "name": "when user clicks on enter",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.when_user_clicks_on_enter()"
@@ -535,10 +620,10 @@
           },
           {
             "result": {
-              "duration": 28150500,
+              "duration": 44914400,
               "status": "passed"
             },
-            "line": 55,
+            "line": 54,
             "name": "user should see the todo item added on the page",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.user_should_see_the_todo_item_added_on_the_page()"
@@ -547,10 +632,10 @@
           },
           {
             "result": {
-              "duration": 48991200,
+              "duration": 50023800,
               "status": "passed"
             },
-            "line": 56,
+            "line": 55,
             "name": "the user is on Active tab",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.theUserIsOnActiveTab()"
@@ -559,10 +644,10 @@
           },
           {
             "result": {
-              "duration": 30201500,
+              "duration": 42314800,
               "status": "passed"
             },
-            "line": 57,
+            "line": 56,
             "name": "the user should see \"1\" item left on Active tab",
             "match": {
               "arguments": [
@@ -577,10 +662,10 @@
           },
           {
             "result": {
-              "duration": 2091312800,
+              "duration": 171866000,
               "status": "passed"
             },
-            "line": 58,
+            "line": 57,
             "name": "user clicks on All tab",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.userClicksOnAllTab()"
@@ -589,10 +674,10 @@
           },
           {
             "result": {
-              "duration": 5159357100,
+              "duration": 186864100,
               "status": "passed"
             },
-            "line": 59,
+            "line": 58,
             "name": "user double click on the item added",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.userDoubleClickOnTheItemAdded()"
@@ -601,10 +686,10 @@
           },
           {
             "result": {
-              "duration": 67705900,
+              "duration": 108906000,
               "status": "passed"
             },
-            "line": 60,
+            "line": 59,
             "name": "user appends \"Courses\" to the item added in search box",
             "match": {
               "arguments": [
@@ -619,10 +704,10 @@
           },
           {
             "result": {
-              "duration": 5031631200,
+              "duration": 18003600,
               "status": "passed"
             },
-            "line": 61,
+            "line": 60,
             "name": "when user clicks on enter",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.when_user_clicks_on_enter()"
@@ -631,10 +716,10 @@
           },
           {
             "result": {
-              "duration": 17150900,
+              "duration": 30997200,
               "status": "passed"
             },
-            "line": 62,
+            "line": 61,
             "name": "the updated value \"Logo DesigningCourses\" should get displayed on All tab",
             "match": {
               "arguments": [
@@ -649,10 +734,10 @@
           },
           {
             "result": {
-              "duration": 41815800,
+              "duration": 71004900,
               "status": "passed"
             },
-            "line": 63,
+            "line": 62,
             "name": "user clicks on cross icon to delete the item added",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.userClicksOnCrossIconToDeleteTheItemAdded()"
@@ -661,10 +746,10 @@
           },
           {
             "result": {
-              "duration": 815226400,
+              "duration": 71996700,
               "status": "passed"
             },
-            "line": 64,
+            "line": 63,
             "name": "the user should see search box only",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.theUserShouldSeeSearchBoxOnly()"
@@ -679,20 +764,41 @@
         ]
       },
       {
-        "start_timestamp": "2021-09-30T18:55:22.168Z",
-        "line": 96,
+        "start_timestamp": "2021-10-10T15:40:16.267Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "bdd.stepDef.Hooks.runScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 95,
         "name": "Adding of multiple To Do list of item",
         "description": "",
-        "id": "to-do-item--positive-flow;adding-of-multiple-to-do-list-of-item;;2",
+        "id": "to-do-item--functionality-testing;adding-of-multiple-to-do-list-of-item;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 658338500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bdd.stepDef.Hooks.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2341840500,
+              "duration": 2987141500,
               "status": "passed"
             },
-            "line": 72,
+            "line": 71,
             "name": "user is on home page of the application",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.user_is_on_home_page_of_the_application()"
@@ -701,10 +807,10 @@
           },
           {
             "result": {
-              "duration": 1007316100,
+              "duration": 1563477900,
               "status": "passed"
             },
-            "line": 73,
+            "line": 72,
             "name": "user enters todo items  in the search box",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.userEntersTodoItemsInTheSearchBox(io.cucumber.datatable.DataTable)"
@@ -750,10 +856,10 @@
           },
           {
             "result": {
-              "duration": 2192188500,
+              "duration": 277528600,
               "status": "passed"
             },
-            "line": 81,
+            "line": 80,
             "name": "the items should be displayed in the all tab",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.theItemsShouldBeDisplayedInTheAllTab(io.cucumber.datatable.DataTable)"
@@ -799,10 +905,10 @@
           },
           {
             "result": {
-              "duration": 28992600,
+              "duration": 39937700,
               "status": "passed"
             },
-            "line": 89,
+            "line": 88,
             "name": "user should see \"7\" items left in footer section on all tab",
             "match": {
               "arguments": [
@@ -817,10 +923,10 @@
           },
           {
             "result": {
-              "duration": 71010500,
+              "duration": 77664400,
               "status": "passed"
             },
-            "line": 90,
+            "line": 89,
             "name": "user clicks on active tab",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.userClicksOnActiveTab()"
@@ -829,10 +935,10 @@
           },
           {
             "result": {
-              "duration": 31988800,
+              "duration": 33006300,
               "status": "passed"
             },
-            "line": 91,
+            "line": 90,
             "name": "user should see \"7\" items left in footer section on Active tab",
             "match": {
               "arguments": [
@@ -847,10 +953,10 @@
           },
           {
             "result": {
-              "duration": 63441800,
+              "duration": 68827100,
               "status": "passed"
             },
-            "line": 92,
+            "line": 91,
             "name": "user clicks on completed tab",
             "match": {
               "location": "bdd.stepDef.ToDoImpl.userClicksOnCompletedTab()"
@@ -859,10 +965,10 @@
           },
           {
             "result": {
-              "duration": 26998300,
+              "duration": 40996100,
               "status": "passed"
             },
-            "line": 93,
+            "line": 92,
             "name": "user should see \"7\" items left in footer section on completed tab",
             "match": {
               "arguments": [
@@ -879,13 +985,16 @@
         "tags": [
           {
             "name": "@Automation"
+          },
+          {
+            "name": "@Automation1"
           }
         ]
       }
     ],
-    "name": "To Do Item- Positive Flow",
+    "name": "To Do Item- Functionality Testing",
     "description": "",
-    "id": "to-do-item--positive-flow",
+    "id": "to-do-item--functionality-testing",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/ToDo.feature",
     "tags": [

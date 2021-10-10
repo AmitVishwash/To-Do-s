@@ -1,162 +1,160 @@
 package bdd.pages;
 
 import bdd.utility.DriverConfig;
-import org.junit.After;
+import bdd.utility.LogHelper;
+import bdd.utility.SeleniumActionHelper;
 import org.junit.Assert;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 
-import java.sql.Driver;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ToDoPage
- {
-     public static String itemToBeAddedText="";
-     public static String editedNewToDoItemName="";
-     public static List<String> actualToDosItemList;
+{
+    public static String itemToBeAddedText="";
+    public static String editedNewToDoItemName="";
+    public static List<String> actualToDosItemList;
 
     By searchBox = By.className("new-todo");
 
-    By editBox= By.xpath("//label[@data-reactid='.0.1.2.$e9179629-03cc-4579-8efb-588b0d27fc15.0.1']");
+    By editBox= By.xpath("//input[@class='edit']");
 
-     By noOfItemsOnFooter = By.xpath("//span[@class='todo-count']");
+    By noOfItemsOnFooter = By.xpath("//span[@class='todo-count']");
 
-     By activeTab=By.xpath("//a[@href='#/active']");
+    By activeTab=By.xpath("//a[@href='#/active']");
 
-     By completedTab=By.xpath("//a[@href='#/completed']");
+    By completedTab=By.xpath("//a[@href='#/completed']");
 
-     By allTab=By.xpath("//a[@href='#/']");
-     By crossButton=By.xpath("//button[@class='destroy']");
+    By allTab=By.xpath("//a[@href='#/']");
 
-    public void openUrl() {
+    By crossButton=By.xpath("//button[@class='destroy']");
+
+    By completeButton = By.xpath("//input[@class='toggle']");
+
+    By allToDoList = By.xpath("//ul[@class='todo-list']/li");
+
+    public void openUrl()    {
+
         DriverConfig.setDriverConfiguration();
     }
 
-    public void enterToDoItemInSearchBox(String toDoItem) {
+    public void enterToDoItemInSearchBox(String toDoItem)    {
 
-       new DriverConfig().driver.findElement(searchBox).sendKeys(toDoItem);
-       itemToBeAddedText=toDoItem;
+       SeleniumActionHelper.typeValue(DriverConfig.driver.findElement(searchBox),toDoItem);
+        itemToBeAddedText=toDoItem;
+    }
+
+    public void clickEnter()    {
+
+        SeleniumActionHelper.clickOnEnter();
 
     }
 
-     public void clickOnEnter() {
-        try {
-            Thread.sleep(5000);
-            new Actions(DriverConfig.driver).sendKeys(Keys.ENTER).build().perform();
-        }catch (Exception e)
-        {
-            System.out.println("Not able to click");
+    public void checkActiveTabStatus()    {
+
+        Assert.assertTrue("Expected:- Active tab should be enabled but the current status is:- "+SeleniumActionHelper.getIsEnabledStatus(DriverConfig.driver.findElement(activeTab)),SeleniumActionHelper.getIsEnabledStatus(DriverConfig.driver.findElement(activeTab)));
+    }
+
+    public void checkForToDoItem() {
+
+        Assert.assertEquals(itemToBeAddedText,SeleniumActionHelper.getTextValue(DriverConfig.driver.findElement(By.xpath("//label[contains(text(),'"+itemToBeAddedText+"')]"))));
+    }
+
+    public void clickOnAllTab()    {
+
+        SeleniumActionHelper.clickOnElement(DriverConfig.driver.findElement(allTab));
+    }
+
+    public void checkNoOfItemsOnPage(String noOfItems)    {
+
+        Assert.assertEquals(noOfItems+" item left", SeleniumActionHelper.getTextValue(DriverConfig.driver.findElement(noOfItemsOnFooter)));
+    }
+
+
+    public void clickOnCirclrcleIcon()    {
+
+        SeleniumActionHelper.clickByAction(DriverConfig.driver,DriverConfig.driver.findElement(completeButton));
+        //new Actions(DriverConfig.driver).click(DriverConfig.driver.findElement(completeButton)).build().perform();
+    }
+
+    public void clickOnCompletedTab()    {
+
+        SeleniumActionHelper.clickOnElement(DriverConfig.driver.findElement(completedTab));
+    }
+
+    public void checkNoOfItemsOnCompletedTab(String noOfItemsLeft)    {
+
+        Assert.assertEquals(noOfItemsLeft+" items left", SeleniumActionHelper.getTextValue(DriverConfig.driver.findElement(noOfItemsOnFooter)));
+    }
+
+    public void dbClickOnToDos()    {
+
+        SeleniumActionHelper.dblClickOnElement(DriverConfig.driver.findElement(By.xpath("//label[contains(text(),'"+itemToBeAddedText+"')]")));
+    }
+
+    public void enterValueInEditSearchBox(String newvalue)    {
+
+        SeleniumActionHelper.typeValue(DriverConfig.driver.findElement(editBox),newvalue);
+        editedNewToDoItemName=newvalue;
+    }
+
+    public void checkUpdatedToDoItemName(String updatedToDoItemName)    {
+
+        Assert.assertEquals(updatedToDoItemName,SeleniumActionHelper.getTextValue(DriverConfig.driver.findElement(By.xpath("//label[contains(text(),'"+itemToBeAddedText+"')]"))));
+    }
+
+    public void clickOnCrossIconToDelete()    {
+
+        SeleniumActionHelper.clickOnElement(DriverConfig.driver.findElement(crossButton));
+    }
+
+    public void checkVisibilityOfSearchBox()    {
+
+        Assert.assertTrue("Expected:- Search box should get displayed but current status is :-"+SeleniumActionHelper.getIsDisplayedStatus(DriverConfig.driver.findElement(searchBox)),SeleniumActionHelper.getIsDisplayedStatus(DriverConfig.driver.findElement(searchBox)));
+    }
+
+    public void addMultipleItems(List<String> listOfItems)    {
+
+        for(int i=0;i<listOfItems.size();i++)    {
+
+            SeleniumActionHelper.typeValue(DriverConfig.driver.findElement(searchBox),listOfItems.get(i));
+            SeleniumActionHelper.clickOnEnter();
+            SeleniumActionHelper.clickOnElement(DriverConfig.driver.findElement(searchBox));
         }
-     }
+    }
 
-     public void checkActiveTabStatus() {
-         Assert.assertTrue("Expected:- Active tab should be enabled but the current status is:- "+DriverConfig.driver.findElement(activeTab).isEnabled(),DriverConfig.driver.findElement(activeTab).isEnabled());
-     }
+    public void checkMultipleToDosItem(List<String> expectedItemList)     {
 
-     public void checkForToDoItem() {
+        LogHelper.info("Expected To Do's List: "+expectedItemList);
+        actualToDosItemList=new ArrayList<>();
+        List<WebElement> webElements= SeleniumActionHelper.findAllElements(DriverConfig.driver,allToDoList);
 
-         Assert.assertEquals(itemToBeAddedText,DriverConfig.driver.findElement(By.xpath("//label[contains(text(),'"+itemToBeAddedText+"')]")).getText());
-     }
+        for(int i=0;i<webElements.size();i++)    {
 
-     public void clickOnAllTab() {
-        try {
-            Thread.sleep(2000);
-            DriverConfig.driver.findElement(allTab).click();
-        }catch (Exception e)
-        {
-            System.out.println("Unable to click on All tab "+e.getMessage());
+            actualToDosItemList.add(SeleniumActionHelper.getTextValue(webElements.get(i)));
         }
-     }
+        LogHelper.info("Actual To Do Items displayed on Screen are:- "+actualToDosItemList);
 
-     public void checkNoOfItemsOnPage(String noOfItems) {
-        Assert.assertEquals(noOfItems+" item left", DriverConfig.driver.findElement(noOfItemsOnFooter).getText());
-     }
+        for(int i=0;i<actualToDosItemList.size();i++)    {
 
-     public void tearDown()
-     {
-        DriverConfig.driver.quit();
-     }
+                if(expectedItemList.size()!=actualToDosItemList.size())    {
 
-     public void clickOnCirclrcleIcon() {
-
-         new Actions(DriverConfig.driver).click(DriverConfig.driver.findElement(By.className("toggle"))).build().perform();
-     }
-
-     public void clickOnCompletedTab() {
-      DriverConfig.driver.findElement(completedTab).click();
-     }
-
-     public void checkNoOfItemsOnCompletedTab(String noOfItemsLeft) {
-         Assert.assertEquals(noOfItemsLeft+" items left", DriverConfig.driver.findElement(noOfItemsOnFooter).getText());
-     }
-
-     public void dbClickOnToDos() {
-         try {
-         new Actions(DriverConfig.driver).doubleClick(DriverConfig.driver.findElement(By.xpath("//label[contains(text(),'"+itemToBeAddedText+"')]"))).build().perform();
-             Thread.sleep(5000);
-
-         }catch (Exception e)
-         {
-            System.out.println("Unable to double click:- "+e.getMessage());
-         }
+                        Assert.fail("Expected List Size is: "+expectedItemList.size()+" and actualToDos list size displayed on UI is: "+actualToDosItemList.size());
+                }
+                else
+                        Assert.assertTrue("Actual list of Items displayed on Page :-"+actualToDosItemList+" and Expected list of items are :-"+expectedItemList,actualToDosItemList.contains(expectedItemList.get(i)));
+        }
 
     }
 
-     public void enterValueInEditSearchBox(String newvalue) {
-         DriverConfig.driver.findElement(By.xpath("//input[@class='edit']")).sendKeys(newvalue);
-         editedNewToDoItemName=newvalue;
-     }
+    public void checkMultipleNoOfItemsOnPage(String noOfItems)    {
 
-     public void checkUpdatedToDoItemName(String updatedToDoItemName) {
-        Assert.assertEquals(updatedToDoItemName,DriverConfig.driver.findElement(By.xpath("//label[contains(text(),'"+itemToBeAddedText+"')]")).getText())  ;
+        Assert.assertEquals(noOfItems+" items left", SeleniumActionHelper.getTextValue(DriverConfig.driver.findElement(noOfItemsOnFooter)));
     }
 
-     public void clickOnCrossIconToDelete() {
-        DriverConfig.driver.findElement(crossButton).click();
+    public void clickOnActiveTab()    {
 
-     }
-
-     public void checkVisibilityOfSearchBox() {
-        Assert.assertTrue("Expected:- Search box should get displayed but current status is :-"+DriverConfig.driver.findElement(searchBox).isDisplayed(),DriverConfig.driver.findElement(searchBox).isDisplayed());
-     }
-
-     public void addMultipleItems(List<String> listOfItems) {
-        for(int i=0;i<listOfItems.size();i++)
-        {
-            DriverConfig.driver.findElement(searchBox).sendKeys((CharSequence) listOfItems.get(i));
-
-            new Actions(DriverConfig.driver).sendKeys(Keys.ENTER).build().perform();
-            DriverConfig.driver.findElement(searchBox).click();
-
-        }
-     }
-
-     public void checkMultipleToDosItem(List<String> expectedItemList) {
-        System.out.println(expectedItemList);
-         actualToDosItemList=new ArrayList<>();
-        List<WebElement> webElements= DriverConfig.driver.findElements(By.xpath("//ul[@class='todo-list']/li"));
-        for(int i=0;i<webElements.size();i++)
-        {
-            actualToDosItemList.add(webElements.get(i).getText());
-        }
-        System.out.println("Actual To Do Items displayed on Screen are:- "+actualToDosItemList);
-        for(int i=0;i<actualToDosItemList.size();i++)
-        {
-            Assert.assertTrue("Actual list of Items displayed on Page :-"+actualToDosItemList+" and Expected list of items are :-"+expectedItemList,actualToDosItemList.contains(expectedItemList.get(i)));
-        }
-
-     }
-
-     public void checkMultipleNoOfItemsOnPage(String noOfItems)
-     {
-         Assert.assertEquals(noOfItems+" items left", DriverConfig.driver.findElement(noOfItemsOnFooter).getText());
-
-     }
-
-     public void clickOnActiveTab() {
-        DriverConfig.driver.findElement(activeTab).click();
-     }
- }
+        SeleniumActionHelper.clickOnElement(DriverConfig.driver.findElement(activeTab));
+    }
+}

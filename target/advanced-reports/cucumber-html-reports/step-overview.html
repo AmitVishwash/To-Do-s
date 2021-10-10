@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>To-Do's</td>
+                          <td>1</td>
+                        <td>10 Oct 2021, 21:10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">bdd.stepDef.Hooks.runScenario(io.cucumber.java.Scenario)</td>
+                <td>5</td>
+                <td class="duration" data-value="114983400">114ms</td>
+                <td class="duration" data-value="22996680">022ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.Hooks.tearDown()</td>
+                <td>5</td>
+                <td class="duration" data-value="3452842300">3s 452ms</td>
+                <td class="duration" data-value="690568460">690ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.clicksOnCircleIconToCompleteTheItem()</td>
+                <td>1</td>
+                <td class="duration" data-value="184050200">184ms</td>
+                <td class="duration" data-value="184050200">184ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.theItemsShouldBeDisplayedInTheAllTab(io.cucumber.datatable.DataTable)</td>
+                <td>1</td>
+                <td class="duration" data-value="277528600">277ms</td>
+                <td class="duration" data-value="277528600">277ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.theUpdatedValueShouldGetDisplayedOnAllTab(java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="59996300">059ms</td>
+                <td class="duration" data-value="29998150">029ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.theUserIsOnActiveTab()</td>
+                <td>4</td>
+                <td class="duration" data-value="217765500">217ms</td>
+                <td class="duration" data-value="54441375">054ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.theUserShouldSeeItemLeftOnActiveTab(java.lang.String)</td>
+                <td>4</td>
+                <td class="duration" data-value="177779800">177ms</td>
+                <td class="duration" data-value="44444950">044ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.theUserShouldSeeItemLeftOnAllTab(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="34500700">034ms</td>
+                <td class="duration" data-value="34500700">034ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.theUserShouldSeeItemLeftOnCompleteTab(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="30999800">030ms</td>
+                <td class="duration" data-value="30999800">030ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.theUserShouldSeeSearchBoxOnly()</td>
+                <td>1</td>
+                <td class="duration" data-value="71996700">071ms</td>
+                <td class="duration" data-value="71996700">071ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.thenUserShouldSeeTheTodoItemAddedOnTheCompletedPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="35995800">035ms</td>
+                <td class="duration" data-value="35995800">035ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.userAppendsToTheItemAddedInSearchBox(java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="219821400">219ms</td>
+                <td class="duration" data-value="109910700">109ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.userClicksOnActiveTab()</td>
+                <td>1</td>
+                <td class="duration" data-value="77664400">077ms</td>
+                <td class="duration" data-value="77664400">077ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.userClicksOnAllTab()</td>
+                <td>4</td>
+                <td class="duration" data-value="468112400">468ms</td>
+                <td class="duration" data-value="117028100">117ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.userClicksOnCompletedTab()</td>
+                <td>2</td>
+                <td class="duration" data-value="164159900">164ms</td>
+                <td class="duration" data-value="82079950">082ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.userClicksOnCrossIconToDeleteTheItemAdded()</td>
+                <td>1</td>
+                <td class="duration" data-value="71004900">071ms</td>
+                <td class="duration" data-value="71004900">071ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.userDoubleClickOnTheItemAdded()</td>
+                <td>2</td>
+                <td class="duration" data-value="372375400">372ms</td>
+                <td class="duration" data-value="186187700">186ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.userEntersTodoItemsInTheSearchBox(io.cucumber.datatable.DataTable)</td>
+                <td>1</td>
+                <td class="duration" data-value="1563477900">1s 563ms</td>
+                <td class="duration" data-value="1563477900">1s 563ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.userShouldSeeItemsLeftInFooterSectionOnActiveTab(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="33006300">033ms</td>
+                <td class="duration" data-value="33006300">033ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.userShouldSeeItemsLeftInFooterSectionOnAllTab(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="39937700">039ms</td>
+                <td class="duration" data-value="39937700">039ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.userShouldSeeItemsLeftInFooterSectionOnCompletedTab(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="40996100">040ms</td>
+                <td class="duration" data-value="40996100">040ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.user_enters_todo_item_in_the_search_box(java.lang.String)</td>
+                <td>4</td>
+                <td class="duration" data-value="591996500">591ms</td>
+                <td class="duration" data-value="147999125">147ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.user_is_on_home_page_of_the_application()</td>
+                <td>5</td>
+                <td class="duration" data-value="27646931800">27s 646ms</td>
+                <td class="duration" data-value="5529386360">5s 529ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.user_should_see_the_todo_item_added_on_the_page()</td>
+                <td>5</td>
+                <td class="duration" data-value="220379700">220ms</td>
+                <td class="duration" data-value="44075940">044ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">bdd.stepDef.ToDoImpl.when_user_clicks_on_enter()</td>
+                <td>6</td>
+                <td class="duration" data-value="236895300">236ms</td>
+                <td class="duration" data-value="39482550">039ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>25</td>
+              <td>62</td>
+              <td class="duration">36s 405ms</td>
+              <td class="duration">587ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

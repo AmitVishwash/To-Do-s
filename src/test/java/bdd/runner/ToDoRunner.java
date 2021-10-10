@@ -9,8 +9,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/ToDo.feature",
         tags = "@Automation",
-        publish = true,
-        plugin = {"pretty", "html:build/reports/cucumber", "json:target/cucumber.json"},
+        plugin = {"pretty","html:target/cucumber-reports/cucumber.html","json:target/cucumber.json"},
          glue = "bdd.stepDef")
-public class ToDoRunner {
+
+public class ToDoRunner    {
+
 }

@@ -1,0 +1,89 @@
+2021-10-10 21:09:45 INFO  LogHelper:24 - [INFO:]Starting execution of scenario: Adding of To Do list of item
+2021-10-10 21:09:51 INFO  LogHelper:24 - [INFO:]Value entered is: Logo Designing
+2021-10-10 21:09:51 INFO  LogHelper:24 - [INFO:]Enter is clicked
+2021-10-10 21:09:51 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Logo Designing
+2021-10-10 21:09:51 INFO  LogHelper:24 - [INFO:]Enabled Status of element is: true
+2021-10-10 21:09:51 INFO  LogHelper:24 - [INFO:]Enabled Status of element is: true
+2021-10-10 21:09:51 INFO  LogHelper:24 - [INFO:]Text displayed on UI: 1 item left
+2021-10-10 21:09:51 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:09:51 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Logo Designing
+2021-10-10 21:09:51 INFO  LogHelper:24 - [INFO:]Text displayed on UI: 1 item left
+2021-10-10 21:09:52 INFO  LogHelper:24 - [INFO:]Ended execution of scenario: Adding of To Do list of item
+2021-10-10 21:09:52 INFO  LogHelper:24 - [INFO:]Starting execution of scenario: Completing of To Do list of item
+2021-10-10 21:10:07 INFO  LogHelper:24 - [INFO:]Value entered is: Logo Designing
+2021-10-10 21:10:07 INFO  LogHelper:24 - [INFO:]Enter is clicked
+2021-10-10 21:10:07 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Logo Designing
+2021-10-10 21:10:07 INFO  LogHelper:24 - [INFO:]Enabled Status of element is: true
+2021-10-10 21:10:07 INFO  LogHelper:24 - [INFO:]Enabled Status of element is: true
+2021-10-10 21:10:07 INFO  LogHelper:24 - [INFO:]Text displayed on UI: 1 item left
+2021-10-10 21:10:07 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:07 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:07 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:07 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Logo Designing
+2021-10-10 21:10:07 INFO  LogHelper:24 - [INFO:]Text displayed on UI: 0 items left
+2021-10-10 21:10:08 INFO  LogHelper:24 - [INFO:]Ended execution of scenario: Completing of To Do list of item
+2021-10-10 21:10:08 INFO  LogHelper:24 - [INFO:]Starting execution of scenario: Editing of To Do list of item
+2021-10-10 21:10:10 INFO  LogHelper:24 - [INFO:]Value entered is: Logo Designing
+2021-10-10 21:10:10 INFO  LogHelper:24 - [INFO:]Enter is clicked
+2021-10-10 21:10:10 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Logo Designing
+2021-10-10 21:10:10 INFO  LogHelper:24 - [INFO:]Enabled Status of element is: true
+2021-10-10 21:10:10 INFO  LogHelper:24 - [INFO:]Enabled Status of element is: true
+2021-10-10 21:10:11 INFO  LogHelper:24 - [INFO:]Text displayed on UI: 1 item left
+2021-10-10 21:10:11 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:11 INFO  LogHelper:24 - [INFO:]Value entered is: Courses
+2021-10-10 21:10:11 INFO  LogHelper:24 - [INFO:]Enter is clicked
+2021-10-10 21:10:11 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Logo DesigningCourses
+2021-10-10 21:10:12 INFO  LogHelper:24 - [INFO:]Ended execution of scenario: Editing of To Do list of item
+2021-10-10 21:10:12 INFO  LogHelper:24 - [INFO:]Starting execution of scenario: Deleting of To Do list of item
+2021-10-10 21:10:14 INFO  LogHelper:24 - [INFO:]Value entered is: Logo Designing
+2021-10-10 21:10:14 INFO  LogHelper:24 - [INFO:]Enter is clicked
+2021-10-10 21:10:14 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Logo Designing
+2021-10-10 21:10:14 INFO  LogHelper:24 - [INFO:]Enabled Status of element is: true
+2021-10-10 21:10:14 INFO  LogHelper:24 - [INFO:]Enabled Status of element is: true
+2021-10-10 21:10:14 INFO  LogHelper:24 - [INFO:]Text displayed on UI: 1 item left
+2021-10-10 21:10:15 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:15 INFO  LogHelper:24 - [INFO:]Value entered is: Courses
+2021-10-10 21:10:15 INFO  LogHelper:24 - [INFO:]Enter is clicked
+2021-10-10 21:10:15 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Logo DesigningCourses
+2021-10-10 21:10:15 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:15 INFO  LogHelper:24 - [INFO:]Enabled Status of element is: true
+2021-10-10 21:10:15 INFO  LogHelper:24 - [INFO:]Enabled Status of element is: true
+2021-10-10 21:10:16 INFO  LogHelper:24 - [INFO:]Ended execution of scenario: Deleting of To Do list of item
+2021-10-10 21:10:16 INFO  LogHelper:24 - [INFO:]Starting execution of scenario: Adding of multiple To Do list of item
+2021-10-10 21:10:19 INFO  LogHelper:24 - [INFO:]Value entered is: Logo Designing
+2021-10-10 21:10:19 INFO  LogHelper:24 - [INFO:]Enter is clicked
+2021-10-10 21:10:19 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:19 INFO  LogHelper:24 - [INFO:]Value entered is: Solving Maths
+2021-10-10 21:10:19 INFO  LogHelper:24 - [INFO:]Enter is clicked
+2021-10-10 21:10:19 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:19 INFO  LogHelper:24 - [INFO:]Value entered is: Architecture
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Enter is clicked
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Value entered is: Playing soccer
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Enter is clicked
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Value entered is: Solving Maths
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Enter is clicked
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Value entered is: Solving Puzzle
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Enter is clicked
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Value entered is: Entertainment
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Enter is clicked
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Expected To Do's List: [Logo Designing, Solving Maths, Architecture, Playing soccer, Solving Maths, Solving Puzzle, Entertainment]
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Logo Designing
+2021-10-10 21:10:20 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Solving Maths
+2021-10-10 21:10:21 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Architecture
+2021-10-10 21:10:21 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Playing soccer
+2021-10-10 21:10:21 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Solving Maths
+2021-10-10 21:10:21 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Solving Puzzle
+2021-10-10 21:10:21 INFO  LogHelper:24 - [INFO:]Text displayed on UI: Entertainment
+2021-10-10 21:10:21 INFO  LogHelper:24 - [INFO:]Actual To Do Items displayed on Screen are:- [Logo Designing, Solving Maths, Architecture, Playing soccer, Solving Maths, Solving Puzzle, Entertainment]
+2021-10-10 21:10:21 INFO  LogHelper:24 - [INFO:]Text displayed on UI: 7 items left
+2021-10-10 21:10:21 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:21 INFO  LogHelper:24 - [INFO:]Text displayed on UI: 7 items left
+2021-10-10 21:10:21 INFO  LogHelper:24 - [INFO:]Element is Clicked
+2021-10-10 21:10:21 INFO  LogHelper:24 - [INFO:]Text displayed on UI: 7 items left
+2021-10-10 21:10:22 INFO  LogHelper:24 - [INFO:]Ended execution of scenario: Adding of multiple To Do list of item
